@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     public function login(){
-        //dd(Hash::make(123456));
+        //dd (Hash::make(123456));
+        
         if(!empty(Auth::check()))
         {
             if(Auth::user()->user_type ==1)
